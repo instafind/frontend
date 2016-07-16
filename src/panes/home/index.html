@@ -1,5 +1,5 @@
 <div>
-  <div class="listing" v-for="result in results" v-on:click="openMap(result.location.latitude, result.location.longitude)">
+  <div class="listing" v-for="result in results" v-on:click="openMapAddress(result.address)">
     {{ result.name }}<br>
     <img v-bind:src="result.image_url"><br>
     {{ result.location.name }}<br>

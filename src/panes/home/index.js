@@ -43,6 +43,10 @@ module.exports = Vue.extend({
     },
     openMap: function(lat, long) {
       window.open('http://maps.google.com/maps/place/' + lat + ',' + long);
+    },
+    openMapAddress: function(address) {
+      var addressString = str.split(' ').join('+');
+      window.open('http://maps.google.com/?q=' + addressString);
     }
   }
 });
