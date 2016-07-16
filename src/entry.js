@@ -6,7 +6,6 @@ var Vue = require('vue');
 
 // Panes.
 var PaneRoot = require('./panes/root/index.js');
-console.log(PaneRoot);
 Vue.component(PaneRoot.vueName, PaneRoot);
 
 // Create a new root instance.
