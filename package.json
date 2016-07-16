@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "builder": "node_modules/.bin/webpack --watch",
+    "server": "node_modules/.bin/http-server dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
