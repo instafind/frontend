@@ -3,7 +3,7 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     path: __dirname,
-    filename: "./dist/bundle.js",
+    filename: "../backend/public/bundle.js",
   },
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.js', '.html', '.scss']

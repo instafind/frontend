@@ -1,8 +1,11 @@
 <div>
-  <p>This is is the home.</p>
   <ul>
     <li v-for="result in results">
-      {{ result.name }}
+      {{ result.name }}<br>
+      {{ result.image_url }}<br>
+      {{ result.location.name }}<br>
+      {{ result.distance }}<br>
+      {{ result.duration }}<br>
     </li>
   </ul>
 </div>

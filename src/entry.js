@@ -2,8 +2,13 @@
 
 var Vue = require('vue');
 var VueRouter = require('vue-router');
+var VueResource = require('vue-resource');
 Vue.use(VueRouter);
+Vue.use(VueResource);
 var App = Vue.extend({});
+
+Vue.http.options.root = 'http://localhost:8083';
+// Vue.http.headers.common['Authorization'] = 'Basic YXBpOnBhc3N3b3Jk';
 
 // Components.
 
@@ -17,6 +22,7 @@ Vue.component('pane-home', PaneHome);
 
 // Routes.
 var router = new VueRouter();
+
 router.map({
   '/search': {
     component: PaneSearch
@@ -24,7 +30,11 @@ router.map({
   '/home': {
     component: PaneHome
   }
-})
+});
+
+router.redirect({
+  '*': '/search'
+});
 
 // Create a new root instance.
 router.start(App, '#app');

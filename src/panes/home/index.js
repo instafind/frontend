@@ -2,6 +2,10 @@ var Vue = require('vue');
 
 module.exports = Vue.extend({
   template: require('./index.html'),
+  ready: function() {
+    console.log("Hello.");
+    this.getListings();
+  },
   data: function() {
     return {
       results: [
@@ -15,6 +19,14 @@ module.exports = Vue.extend({
           name: "What's up?"
         }
       ]
+    }
+  },
+  methods: {
+    getListings: function() {
+      var _this = this;
+      _this.$http.get('/data', function(results) {
+        _this.results = results;
+      });
     }
   }
 });
