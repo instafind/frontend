@@ -2,10 +2,10 @@
   <ul>
     <li v-for="result in results">
       {{ result.name }}<br>
-      {{ result.image_url }}<br>
+      <img :src="{{ result.image_url }}"><br>
       {{ result.location.name }}<br>
-      {{ result.distance }}<br>
-      {{ result.duration }}<br>
+      {{ result.distance.text }}<br>
+      {{ result.duration.text }}<br>
     </li>
   </ul>
 </div>

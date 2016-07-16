@@ -24,8 +24,8 @@ module.exports = Vue.extend({
   methods: {
     getListings: function() {
       var _this = this;
-      _this.$http.get('/data', function(results) {
-        _this.results = results;
+      _this.$http.get('/data').then(function(results) {
+        _this.results = JSON.parse(results.body);
       });
     }
   }
