@@ -6,8 +6,8 @@ To run the dev environment, run the following.
 
 ```bash
 # Builds your files and listens to changes.
-npm start-builder
+npm run builder
 
 # Starts the simple server to load the app.
-npm start-server
+npm run server
 ```
