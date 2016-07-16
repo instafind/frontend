@@ -1,4 +1,5 @@
 var Vue = require('vue');
+require('./index.scss');
 
 module.exports = Vue.extend({
   template: require('./index.html'),
@@ -10,13 +11,25 @@ module.exports = Vue.extend({
     return {
       results: [
         {
-          name: "Restaurant Randomroo"
+          name: "Restaurant Randomroo",
+          location: {
+            latitude: 5,
+            longitude: 5
+          }
         },
         {
-          name: "Cat Bat Sat"
+          name: "Cat Bat Sat",
+          location: {
+            latitude: 5,
+            longitude: 5
+          }
         },
         {
-          name: "What's up?"
+          name: "What's up?",
+          location: {
+            latitude: 5,
+            longitude: 5
+          }
         }
       ]
     }
@@ -25,8 +38,11 @@ module.exports = Vue.extend({
     getListings: function() {
       var _this = this;
       _this.$http.get('/data').then(function(results) {
-        _this.results = JSON.parse(results.body);
+        // _this.results = JSON.parse(results.body);
       });
+    },
+    openMap: function(lat, long) {
+      window.open('http://maps.google.com/maps/place/' + lat + ',' + long);
     }
   }
 });

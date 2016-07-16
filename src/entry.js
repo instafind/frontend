@@ -21,9 +21,9 @@ var PaneHome = require('./panes/home');
 Vue.component('pane-home', PaneHome);
 
 // Routes.
-var router = new VueRouter();
+window.router = new VueRouter();
 
-router.map({
+window.router.map({
   '/search': {
     component: PaneSearch
   },
@@ -32,9 +32,9 @@ router.map({
   }
 });
 
-router.redirect({
+window.router.redirect({
   '*': '/search'
 });
 
 // Create a new root instance.
-router.start(App, '#app');
+window.router.start(App, '#app');
