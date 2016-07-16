@@ -1,10 +1,6 @@
 var Vue = require('vue');
+require('./index.scss');
 
 module.exports = Vue.extend({
-  template: require('./index.html'),
-  data: function() {
-    return {
-      message: "Hello from the root!"
-    }
-  }
+  template: require('./index.html')
 });
