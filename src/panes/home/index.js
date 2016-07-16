@@ -38,7 +38,7 @@ module.exports = Vue.extend({
     getListings: function() {
       var _this = this;
       _this.$http.get('/data').then(function(results) {
-        // _this.results = JSON.parse(results.body);
+        _this.results = JSON.parse(results.body);
       });
     },
     openMap: function(lat, long) {
