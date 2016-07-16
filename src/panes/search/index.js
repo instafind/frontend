@@ -6,6 +6,7 @@ module.exports = Vue.extend({
   methods: {
     search: function() {
       window.router.go('/home');
+      // this.$http.post('/someUrl', [body], [options]).then(successCallback, errorCallback);
     }
   }
 });

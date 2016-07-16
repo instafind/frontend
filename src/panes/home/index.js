@@ -45,7 +45,7 @@ module.exports = Vue.extend({
       window.open('http://maps.google.com/maps/place/' + lat + ',' + long);
     },
     openMapAddress: function(address) {
-      var addressString = str.split(' ').join('+');
+      var addressString = address.split(' ').join('+');
       window.open('http://maps.google.com/?q=' + addressString);
     }
   }
