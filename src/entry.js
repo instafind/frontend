@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var Vue = require('vue');
 var VueRouter = require('vue-router');
@@ -8,9 +8,6 @@ Vue.use(VueResource);
 var App = Vue.extend({});
 
 Vue.http.options.root = 'http://localhost:8083';
-// Vue.http.headers.common['Authorization'] = 'Basic YXBpOnBhc3N3b3Jk';
-
-// Components.
 
 // Panes.
 var PaneRoot = require('./panes/root');
